@@ -20,6 +20,14 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/product", (req, res) => {
+  res.render("index.ejs", {
+    recipe: data,
+  });
+});
+
+
+
 app.post("/recipe", (req, res) => {
   switch (req.body.choice) {
     case "chicken":
