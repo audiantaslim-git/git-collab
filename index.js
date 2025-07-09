@@ -32,15 +32,18 @@ app.get("/customer", (req, res) => {
   res.json(customer);
 })
 
-app.get("/product", (req, res) => {
-  console.log("a")
-
-  res.json(product);
-})
 
 app.get("/fitur1", (req, res) => {
   res.json(data);
 });
+
+app.get("/product", (req, res) => {
+  res.render("index.ejs", {
+    recipe: data,
+  });
+});
+
+
 
 app.post("/recipe", (req, res) => {
   switch (req.body.choice) {
