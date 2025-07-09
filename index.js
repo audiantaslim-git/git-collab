@@ -44,6 +44,11 @@ app.get("/product", (req, res) => {
 });
 
 
+app.get("/price", (req, res) => {
+  res.render("index.ejs", {
+    recipe: data,
+  });
+});
 
 app.post("/recipe", (req, res) => {
   switch (req.body.choice) {
