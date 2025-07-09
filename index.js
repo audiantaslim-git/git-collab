@@ -33,6 +33,8 @@ app.get("/customer", (req, res) => {
 })
 
 app.get("/product", (req, res) => {
+  console.log("a")
+
   res.json(product);
 })
 
